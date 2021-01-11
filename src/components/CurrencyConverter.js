@@ -25,8 +25,12 @@ const CurrencyConverter = () => {
             <form onSubmit={getRate}>
                 <label>First</label>
                 <input onChange={handleChangeFirst} value={first}></input>
-                <label>Second</label>
-                <input onChange={handleChangeSecond} value={second}></input>
+
+                <select onChange={handleChangeSecond} value={second}>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="AUD">AUD</option>
+                </select>
                 <button>Get Rate</button>
             </form>
         </section>
