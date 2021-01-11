@@ -5,15 +5,15 @@ const CurrencyConverter = () => {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
 
-    // useEffect(() => {
-    //     axios({
-    //         method: "GET",
-    //         url:
-    //             "https://free.currconv.com/api/v7/convert?q=USD_GBP&compact=ultra&apiKey=0940afb0a07457dbd415",
-    //     }).then((response) => {
-    //         console.log(response.data);
-    //     });
-    // });
+    useEffect(() => {
+        axios({
+            method: "GET",
+            url:
+                "https://free.currconv.com/api/v7/convert?q=USD_GBP&compact=ultra&apiKey=0940afb0a07457dbd415",
+        }).then((response) => {
+            console.log(response.data);
+        });
+    });
 
     const getRate = () => {};
 
