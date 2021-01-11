@@ -5,6 +5,7 @@ import CurrencyList from "./CurrencyList";
 const CurrencyConverter = () => {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
+    const [rate, setRate] = useState([]);
 
     const getRate = (e) => {
         e.preventDefault();
@@ -13,6 +14,7 @@ const CurrencyConverter = () => {
             url: `https://free.currconv.com/api/v7/convert?q=${first}_${second}&compact=ultra&apiKey=0940afb0a07457dbd415`,
         }).then((response) => {
             console.log(response.data);
+            setRate(response.data);
         });
     };
 
@@ -25,17 +27,19 @@ const CurrencyConverter = () => {
             <h2>Currency Pair!!!</h2>
             <form onSubmit={getRate}>
                 <CurrencyList
-                    name="First"
+                    name="FX 1"
                     handleChange={handleChangeFirst}
                     value={first}
                 />
                 <CurrencyList
-                    name="Second"
+                    name="FX 2"
                     handleChange={handleChangeSecond}
                     value={second}
                 />
                 <button>Get Rate</button>
             </form>
+
+            <div>{rate[`${first}_${second}`]}</div>
         </section>
     );
 };
