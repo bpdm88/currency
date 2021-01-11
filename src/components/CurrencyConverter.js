@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import CurrencyList from "./CurrencyList";
 
 const CurrencyConverter = () => {
     const [first, setFirst] = useState("");
@@ -23,14 +24,16 @@ const CurrencyConverter = () => {
         <section>
             <h2>Currency Pair!!!</h2>
             <form onSubmit={getRate}>
-                <label>First</label>
-                <input onChange={handleChangeFirst} value={first}></input>
-
-                <select onChange={handleChangeSecond} value={second}>
-                    <option value="USD">USD</option>
-                    <option value="GBP">GBP</option>
-                    <option value="AUD">AUD</option>
-                </select>
+                <CurrencyList
+                    name="First"
+                    handleChange={handleChangeFirst}
+                    value={first}
+                />
+                <CurrencyList
+                    name="Second"
+                    handleChange={handleChangeSecond}
+                    value={second}
+                />
                 <button>Get Rate</button>
             </form>
         </section>
