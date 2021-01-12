@@ -20,9 +20,15 @@ const CurrencyConverter = () => {
         });
     };
 
-    const handleChangeFirst = (e) => setFirst(e.currentTarget.value);
+    const handleChangeFirst = (e) => {
+        setFirst(e.currentTarget.value);
+        setDisplay(false);
+    };
 
-    const handleChangeSecond = (e) => setSecond(e.currentTarget.value);
+    const handleChangeSecond = (e) => {
+        setSecond(e.currentTarget.value);
+        setDisplay(false);
+    };
 
     return (
         <section className="converter">
