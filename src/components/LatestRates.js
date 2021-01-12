@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import usa from "../assets/images/united-states.png";
+import eu from "../assets/images/european-union.png";
+import gb from "../assets/images/united-kingdom.png";
+import jpy from "../assets/images/japan.png";
+import aus from "../assets/images/australia.png";
+import can from "../assets/images/canada.png";
+
 const LatestRates = () => {
     const [list, setList] = useState();
 
@@ -23,11 +30,21 @@ const LatestRates = () => {
                 currency of GBP
             </p>
             <ul>
-                <li>USD</li>
-                <li>EUR</li>
-                <li>JPY</li>
-                <li>CAD</li>
-                <li>AUD</li>
+                <li>
+                    <img src={usa}></img>USD
+                </li>
+                <li>
+                    <img src={eu}></img>EUR
+                </li>
+                <li>
+                    <img src={jpy}></img>JPY
+                </li>
+                <li>
+                    <img src={can}></img>CAD
+                </li>
+                <li>
+                    <img src={aus}></img>AUD
+                </li>
             </ul>
         </section>
     );

@@ -5,3 +5,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* latest rates */
+
+li {
+    display: flex;
+}
