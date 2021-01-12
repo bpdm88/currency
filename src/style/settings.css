@@ -1,0 +1,23 @@
+:root {
+    /* colours */
+    --grey: rgb(243, 244, 245);
+    --navy: rgb(67, 71, 84);
+
+    /* typography */
+    --heading-alpha: 70px;
+    --heading-bravo: 40px;
+}
+
+@media screen and (max-width: 960px) {
+    :root {
+        --heading-alpha: 60px;
+        --heading-bravo: 30px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    :root {
+        --heading-alpha: 40px;
+        --heading-bravo: 20px;
+    }
+}

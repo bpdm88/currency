@@ -17,7 +17,11 @@ const LatestRates = () => {
 
     return (
         <section>
-            <h2>Base Rate: GBP £1</h2>
+            <h2 className="heading--bravo">Latest Rates</h2>
+            <p>
+                Check out the latest foreign exchange rates against base
+                currency of GBP
+            </p>
             <ul>
                 <li>USD</li>
                 <li>EUR</li>

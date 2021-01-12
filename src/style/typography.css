@@ -1,0 +1,27 @@
+@font-face {
+    font-family: mont;
+    src: url(../assets/fonts/MontserratAlternates-Bold.ttf) forma("truetype");
+}
+
+@font-face {
+    font-family: nunito;
+    src: url(../assets/fonts/Nunito-Light.ttf) format("truetype");
+}
+
+.heading--alpha {
+    font-family: mont, sans-serif;
+    font-size: var(--heading-alpha);
+    color: var(--navy);
+}
+
+.heading--bravo {
+    font-family: mont, sans-serif;
+    font-size: var(--heading-bravo);
+    color: var(--navy);
+}
+
+p,
+li,
+label {
+    font-family: nunito;
+}
