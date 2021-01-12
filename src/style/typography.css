@@ -1,8 +1,11 @@
 @font-face {
     font-family: mont;
-    src: url(../assets/fonts/MontserratAlternates-Bold.ttf) forma("truetype");
+    src: url(../assets/fonts/MontserratAlternates-Bold.ttf) format("truetype");
 }
-
+@font-face {
+    font-family: cabin;
+    src: url(../assets/fonts/Cabin-Bold.ttf) format("truetype");
+}
 @font-face {
     font-family: nunito;
     src: url(../assets/fonts/Nunito-Light.ttf) format("truetype");
@@ -17,7 +20,7 @@
 }
 
 .heading--bravo {
-    font-family: mont, sans-serif;
+    font-family: cabin, sans-serif;
     font-size: var(--heading-bravo);
     color: var(--navy);
     padding: var(--font-spacing);

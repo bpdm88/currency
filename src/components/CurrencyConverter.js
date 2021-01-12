@@ -23,23 +23,32 @@ const CurrencyConverter = () => {
     const handleChangeSecond = (e) => setSecond(e.currentTarget.value);
 
     return (
-        <section>
+        <section className="converter">
             <h2 className="heading--bravo">Converter</h2>
+            <p>
+                Check out the latest foreign exchange rates against base
+                currency of GBP
+            </p>
+            <p>
+                Currency rates are updated every 24 hours with new exchange
+                rates.
+            </p>
             <form onSubmit={getRate}>
                 <CurrencyList
-                    name="FX 1"
+                    name="From"
                     handleChange={handleChangeFirst}
                     value={first}
                 />
                 <CurrencyList
-                    name="FX 2"
+                    name="To"
                     handleChange={handleChangeSecond}
                     value={second}
                 />
                 <button>Get Rate</button>
             </form>
-
-            <div>{rate[`${first}_${second}`]}</div>
+            <p>
+                Exchange Rate: 1 {first} = {rate[`${first}_${second}`]} {second}{" "}
+            </p>
         </section>
     );
 };

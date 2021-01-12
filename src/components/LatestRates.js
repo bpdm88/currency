@@ -28,7 +28,7 @@ const LatestRates = () => {
     // }, []);
 
     return (
-        <section>
+        <section className="rates">
             <h2 className="heading--bravo">Latest Rates</h2>
             <p>
                 Check out the latest foreign exchange rates against base
