@@ -6,6 +6,7 @@ const CurrencyConverter = () => {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
     const [rate, setRate] = useState([]);
+    const [display, setDisplay] = useState(false);
 
     const getRate = (e) => {
         e.preventDefault();
@@ -15,6 +16,7 @@ const CurrencyConverter = () => {
         }).then((response) => {
             console.log(response.data);
             setRate(response.data);
+            setDisplay(true);
         });
     };
 
@@ -46,9 +48,12 @@ const CurrencyConverter = () => {
                 />
                 <button>Get Rate</button>
             </form>
-            <p>
-                Exchange Rate: 1 {first} = {rate[`${first}_${second}`]} {second}{" "}
-            </p>
+            {!display ? null : (
+                <p>
+                    Exchange Rate: 1 {first} = {rate[`${first}_${second}`]}{" "}
+                    {second}{" "}
+                </p>
+            )}
         </section>
     );
 };
