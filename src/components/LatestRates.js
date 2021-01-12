@@ -40,37 +40,37 @@ const LatestRates = () => {
             </p>
             <ul>
                 <li>
-                    <img src={gb}></img>GBP
+                    <img src={gb}></img>GBP<span>1</span>
                 </li>
                 <li>
-                    <img src={usa}></img>USD
+                    <img src={usa}></img>USD<span>1</span>
                 </li>
                 <li>
-                    <img src={eu}></img>EUR
+                    <img src={eu}></img>EUR<span>1</span>
                 </li>
                 <li>
-                    <img src={jpy}></img>JPY
+                    <img src={jpy}></img>JPY<span>1</span>
                 </li>
                 <li>
-                    <img src={can}></img>CAD
+                    <img src={can}></img>CAD<span>1</span>
                 </li>
                 <li>
-                    <img src={aus}></img>AUD
+                    <img src={aus}></img>AUD<span>1</span>
                 </li>
                 <li>
-                    <img src={nz}></img>NZD
+                    <img src={nz}></img>NZD<span>1</span>
                 </li>
                 <li>
-                    <img src={swz}></img>CHF
+                    <img src={swz}></img>CHF<span>1</span>
                 </li>
                 <li>
-                    <img src={sa}></img>ZAR
+                    <img src={sa}></img>ZAR<span>1</span>
                 </li>
                 <li>
-                    <img src={ind}></img>INR
+                    <img src={ind}></img>INR<span>1</span>
                 </li>
                 <li>
-                    <img src={snp}></img>SGD
+                    <img src={snp}></img>SGD<span>1</span>
                 </li>
             </ul>
         </section>
