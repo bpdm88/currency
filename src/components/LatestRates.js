@@ -7,6 +7,11 @@ import gb from "../assets/images/united-kingdom.png";
 import jpy from "../assets/images/japan.png";
 import aus from "../assets/images/australia.png";
 import can from "../assets/images/canada.png";
+import nz from "../assets/images/new-zealand.png";
+import swz from "../assets/images/switzerland.png";
+import sa from "../assets/images/south-africa.png";
+import ind from "../assets/images/india.png";
+import snp from "../assets/images/singapore.png";
 
 const LatestRates = () => {
     const [list, setList] = useState();
@@ -29,7 +34,14 @@ const LatestRates = () => {
                 Check out the latest foreign exchange rates against base
                 currency of GBP
             </p>
+            <p>
+                Currency rates are updated every 24 hours with new exchange
+                rates.
+            </p>
             <ul>
+                <li>
+                    <img src={gb}></img>GBP
+                </li>
                 <li>
                     <img src={usa}></img>USD
                 </li>
@@ -44,6 +56,21 @@ const LatestRates = () => {
                 </li>
                 <li>
                     <img src={aus}></img>AUD
+                </li>
+                <li>
+                    <img src={nz}></img>NZD
+                </li>
+                <li>
+                    <img src={swz}></img>CHF
+                </li>
+                <li>
+                    <img src={sa}></img>ZAR
+                </li>
+                <li>
+                    <img src={ind}></img>INR
+                </li>
+                <li>
+                    <img src={snp}></img>SGD
                 </li>
             </ul>
         </section>

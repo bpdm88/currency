@@ -6,12 +6,19 @@
     /* typography */
     --heading-alpha: 70px;
     --heading-bravo: 40px;
+
+    /* spacing */
+
+    --border-spacing: 20px;
+    --font-spacing: 12px;
 }
 
 @media screen and (max-width: 960px) {
     :root {
         --heading-alpha: 60px;
         --heading-bravo: 30px;
+        --border-spacing: 15px;
+        --font-spacing: 10px;
     }
 }
 
@@ -19,5 +26,7 @@
     :root {
         --heading-alpha: 40px;
         --heading-bravo: 20px;
+        --border-spacing: 10px;
+        --font-spacing: 8px;
     }
 }

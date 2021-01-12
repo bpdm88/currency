@@ -24,7 +24,7 @@ const CurrencyConverter = () => {
 
     return (
         <section>
-            <h2 className="heading--bravo">Currency Pair!!!</h2>
+            <h2 className="heading--bravo">Converter</h2>
             <form onSubmit={getRate}>
                 <CurrencyList
                     name="FX 1"

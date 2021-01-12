@@ -12,12 +12,16 @@
     font-family: mont, sans-serif;
     font-size: var(--heading-alpha);
     color: var(--navy);
+    padding: var(--font-spacing);
+    text-align: center;
 }
 
 .heading--bravo {
     font-family: mont, sans-serif;
     font-size: var(--heading-bravo);
     color: var(--navy);
+    padding: var(--font-spacing);
+    text-align: center;
 }
 
 p,
