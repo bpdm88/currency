@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/currency/static/css/main.1e5d487e.chunk.css",
+    "main.js": "/currency/static/js/main.c10da20d.chunk.js",
+    "main.js.map": "/currency/static/js/main.c10da20d.chunk.js.map",
+    "runtime-main.js": "/currency/static/js/runtime-main.26645f4a.js",
+    "runtime-main.js.map": "/currency/static/js/runtime-main.26645f4a.js.map",
+    "static/js/2.8e265d10.chunk.js": "/currency/static/js/2.8e265d10.chunk.js",
+    "static/js/2.8e265d10.chunk.js.map": "/currency/static/js/2.8e265d10.chunk.js.map",
+    "static/js/3.c2145d00.chunk.js": "/currency/static/js/3.c2145d00.chunk.js",
+    "static/js/3.c2145d00.chunk.js.map": "/currency/static/js/3.c2145d00.chunk.js.map",
+    "index.html": "/currency/index.html",
+    "static/css/main.1e5d487e.chunk.css.map": "/currency/static/css/main.1e5d487e.chunk.css.map",
+    "static/js/2.8e265d10.chunk.js.LICENSE.txt": "/currency/static/js/2.8e265d10.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/currency/static/media/Nunito-Light.abdadce6.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26645f4a.js",
+    "static/js/2.8e265d10.chunk.js",
+    "static/css/main.1e5d487e.chunk.css",
+    "static/js/main.c10da20d.chunk.js"
+  ]
+}
