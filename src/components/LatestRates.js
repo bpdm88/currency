@@ -37,38 +37,54 @@ const LatestRates = () => {
             </p>
             <ul>
                 <li>
-                    <img src={gb}></img>GBP<span>1</span>
+                    <span className="fix-flag">
+                        <img src={gb}></img>
+                    </span>
+                    <span className="fix">GBP</span>
+                    <span className="fix">1</span>
                 </li>
                 <li>
-                    <img src={usa}></img>USD<span>1</span>
+                    <span className="fix-flag">
+                        <img src={usa}></img>
+                    </span>
+                    <span className="fix">USD</span>
+                    <span className="fix">1.3606</span>
                 </li>
                 <li>
-                    <img src={eu}></img>EUR<span>1</span>
+                    <span className="fix-flag">
+                        <img src={eu}></img>
+                    </span>
+                    <span className="fix">EUR</span>
+                    <span className="fix">1.1165</span>
                 </li>
                 <li>
-                    <img src={jpy}></img>JPY<span>1</span>
+                    <span className="fix-flag">
+                        <img src={jpy}></img>
+                    </span>
+                    <span className="fix">JPY</span>
+                    <span className="fix">141.5274</span>
+                </li>
+                {/* <li>
+                    <img src={can}></img>CAD<span>{list.CAD}</span>
                 </li>
                 <li>
-                    <img src={can}></img>CAD<span>1</span>
+                    <img src={aus}></img>AUD<span>{list.AUD}</span>
                 </li>
                 <li>
-                    <img src={aus}></img>AUD<span>1</span>
+                    <img src={nz}></img>NZD<span>{list.NZD}</span>
                 </li>
                 <li>
-                    <img src={nz}></img>NZD<span>1</span>
+                    <img src={swz}></img>CHF<span>{list.CHF}</span>
                 </li>
                 <li>
-                    <img src={swz}></img>CHF<span>1</span>
+                    <img src={sa}></img>ZAR<span>{list.ZAR}</span>
                 </li>
                 <li>
-                    <img src={sa}></img>ZAR<span>1</span>
+                    <img src={ind}></img>INR<span>{list.INR}</span>
                 </li>
                 <li>
-                    <img src={ind}></img>INR<span>1</span>
-                </li>
-                <li>
-                    <img src={snp}></img>SGD<span>1</span>
-                </li>
+                    <img src={snp}></img>SGD<span>{list.SGD}</span>
+                </li> */}
             </ul>
         </section>
     );
