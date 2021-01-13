@@ -52,7 +52,9 @@ const CurrencyConverter = () => {
                     handleChange={handleChangeSecond}
                     value={second}
                 />
-                <button>Get Rate</button>
+                <button>
+                    <span>Get Rate</span>
+                </button>
             </form>
             {!display ? null : (
                 <p>
