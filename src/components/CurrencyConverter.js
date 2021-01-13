@@ -6,6 +6,7 @@ const CurrencyConverter = () => {
     const [first, setFirst] = useState("");
     const [second, setSecond] = useState("");
     const [rate, setRate] = useState([]);
+    const [display, setDisplay] = useState(false);
 
     const getRate = (e) => {
         e.preventDefault();
@@ -15,31 +16,49 @@ const CurrencyConverter = () => {
         }).then((response) => {
             console.log(response.data);
             setRate(response.data);
+            setDisplay(true);
         });
     };
 
-    const handleChangeFirst = (e) => setFirst(e.currentTarget.value);
+    const handleChangeFirst = (e) => {
+        setFirst(e.currentTarget.value);
+        setDisplay(false);
+    };
 
-    const handleChangeSecond = (e) => setSecond(e.currentTarget.value);
+    const handleChangeSecond = (e) => {
+        setSecond(e.currentTarget.value);
+        setDisplay(false);
+    };
 
     return (
-        <section>
-            <h2>Currency Pair!!!</h2>
+        <section className="converter">
+            <h2 className="heading--bravo">Converter</h2>
+            <p>
+                Pick a currency pair to check out the latest exchange rate for
+                the currencies. Currency rates are updated every 24 hours with
+                new exchange rates.
+            </p>
             <form onSubmit={getRate}>
                 <CurrencyList
-                    name="FX 1"
+                    name="From"
                     handleChange={handleChangeFirst}
                     value={first}
                 />
                 <CurrencyList
-                    name="FX 2"
+                    name="To"
                     handleChange={handleChangeSecond}
                     value={second}
                 />
-                <button>Get Rate</button>
+                <button>
+                    <span>Get Rate</span>
+                </button>
             </form>
-
-            <div>{rate[`${first}_${second}`]}</div>
+            {!display ? null : (
+                <p>
+                    Exchange Rate: 1 {first} = {rate[`${first}_${second}`]}{" "}
+                    {second}{" "}
+                </p>
+            )}
         </section>
     );
 };
