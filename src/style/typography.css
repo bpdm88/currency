@@ -31,4 +31,6 @@ p,
 li,
 label {
     font-family: nunito;
+    font-size: var(--standard);
+    text-align: center;
 }

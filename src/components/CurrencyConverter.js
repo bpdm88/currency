@@ -34,12 +34,9 @@ const CurrencyConverter = () => {
         <section className="converter">
             <h2 className="heading--bravo">Converter</h2>
             <p>
-                Check out the latest foreign exchange rates against base
-                currency of GBP
-            </p>
-            <p>
-                Currency rates are updated every 24 hours with new exchange
-                rates.
+                Pick a currency pair to check out the latest exchange rate for
+                the currencies. Currency rates are updated every 24 hours with
+                new exchange rates.
             </p>
             <form onSubmit={getRate}>
                 <CurrencyList

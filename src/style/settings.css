@@ -8,6 +8,7 @@
     /* typography */
     --heading-alpha: 60px;
     --heading-bravo: 40px;
+    --standard: 16px;
 
     /* spacing */
 
@@ -21,6 +22,7 @@
     :root {
         --heading-alpha: 50px;
         --heading-bravo: 30px;
+        --standard: 14px;
         --spacing-md: 15px;
         --spacing-sm: 8px;
         --font-spacing: 10px;
@@ -31,6 +33,7 @@
     :root {
         --heading-alpha: 40px;
         --heading-bravo: 20px;
+        --standard: 12px;
         --spacing-md: 10px;
         --spacing-sm: 6px;
         --font-spacing: 8px;

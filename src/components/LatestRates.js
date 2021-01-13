@@ -32,11 +32,8 @@ const LatestRates = () => {
             <h2 className="heading--bravo">Latest Rates</h2>
             <p>
                 Check out the latest foreign exchange rates against base
-                currency of GBP
-            </p>
-            <p>
-                Currency rates are updated every 24 hours with new exchange
-                rates.
+                currency of GBP. Currency rates are updated every 24 hours with
+                new exchange rates.
             </p>
             <ul>
                 <li>

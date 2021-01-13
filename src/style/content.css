@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: var(--spacing-sm);
 }
 
 ul {
@@ -37,6 +38,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: var(--spacing-sm);
 }
 
 form {
@@ -50,10 +52,19 @@ select {
     width: 200px;
     height: 30px;
     border-radius: 2.5px;
+    margin: var(--spacing-sm);
     text-align: center;
     font-family: nunito;
 }
 
 label {
     padding: var(--spacing-xs);
+}
+
+@media screen and (max-width: 750px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
