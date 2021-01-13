@@ -14,19 +14,19 @@ import ind from "../assets/images/india.png";
 import snp from "../assets/images/singapore.png";
 
 const LatestRates = () => {
+    const [loaded, setLoaded] = useState(false);
     const [list, setList] = useState();
 
-    // useEffect(() => {
-    //     axios({
-    //         method: "GET",
-    //         url:
-    //             "https://v6.exchangerate-api.com/v6/b2ff8db2977c244d5c41f000/latest/GBP",
-    //     }).then((response) => {
-    //         console.log(response.data.conversion_rates);
-    //         setList(response.data.conversion_rates);
-    //     });
-    // }, []);
-
+    useEffect(() => {
+        axios({
+            method: "GET",
+            url:
+                "https://v6.exchangerate-api.com/v6/b2ff8db2977c244d5c41f000/latest/GBP",
+        }).then((response) => {
+            setList(response.data.conversion_rates);
+            setLoaded(true);
+        });
+    }, []);
     return (
         <section className="rates">
             <h2 className="heading--bravo">Latest Rates</h2>
@@ -35,41 +35,89 @@ const LatestRates = () => {
                 currency of GBP. Currency rates are updated every 24 hours with
                 new exchange rates.
             </p>
-            <ul>
-                <li>
-                    <img src={gb}></img>GBP<span>1</span>
-                </li>
-                <li>
-                    <img src={usa}></img>USD<span>1</span>
-                </li>
-                <li>
-                    <img src={eu}></img>EUR<span>1</span>
-                </li>
-                <li>
-                    <img src={jpy}></img>JPY<span>1</span>
-                </li>
-                <li>
-                    <img src={can}></img>CAD<span>1</span>
-                </li>
-                <li>
-                    <img src={aus}></img>AUD<span>1</span>
-                </li>
-                <li>
-                    <img src={nz}></img>NZD<span>1</span>
-                </li>
-                <li>
-                    <img src={swz}></img>CHF<span>1</span>
-                </li>
-                <li>
-                    <img src={sa}></img>ZAR<span>1</span>
-                </li>
-                <li>
-                    <img src={ind}></img>INR<span>1</span>
-                </li>
-                <li>
-                    <img src={snp}></img>SGD<span>1</span>
-                </li>
-            </ul>
+            {!loaded ? (
+                <p>Loading</p>
+            ) : (
+                <ul>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={gb}></img>
+                        </span>
+                        <span className="fix">GBP</span>
+                        <span className="fix">1</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={usa}></img>
+                        </span>
+                        <span className="fix">USD</span>
+                        <span className="fix">{list.USD}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={eu}></img>
+                        </span>
+                        <span className="fix">EUR</span>
+                        <span className="fix">{list.EUR}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={jpy}></img>
+                        </span>
+                        <span className="fix">JPY</span>
+                        <span className="fix">{list.JPY}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={can}></img>
+                        </span>
+                        <span className="fix">CAD</span>
+                        <span className="fix">{list.CAD}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={aus}></img>
+                        </span>
+                        <span className="fix">AUD</span>
+                        <span className="fix">{list.AUD}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={nz}></img>
+                        </span>
+                        <span className="fix">NZD</span>
+                        <span className="fix">{list.NZD}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={swz}></img>
+                        </span>
+                        <span className="fix">CHF</span>
+                        <span className="fix">{list.CHF}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={sa}></img>
+                        </span>
+                        <span className="fix">ZAR</span>
+                        <span className="fix">{list.ZAR}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={ind}></img>
+                        </span>
+                        <span className="fix">INR</span>
+                        <span className="fix">{list.INR}</span>
+                    </li>
+                    <li>
+                        <span className="fix-flag">
+                            <img src={snp}></img>
+                        </span>
+                        <span className="fix">SGD</span>
+                        <span className="fix">{list.SGD}</span>
+                    </li>
+                </ul>
+            )}
         </section>
     );
 };
